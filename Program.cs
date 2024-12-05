@@ -33,10 +33,6 @@ Console.WriteLine("Fazendo o sorteio... \n");
 
 
 
-//Fazer um array para os números sorteados
-// A cada sorteio o random deve verificar se esse valor já não foi sorteado e se o número da posição não é o mesmo
-
-
 Random rnd = new Random();
 List<int> PosicoesSorteadas = new List<int>();
 
@@ -46,20 +42,28 @@ for (int i=0; i< Participantes.Count; i++)
     {
 
     bool PosicaoRepetida = true;
+    int Posicao = -1;
+
     while (PosicaoRepetida == true)
         {
+        
         PosicaoRepetida = false;
-        int Posicao = rnd.Next(0,Participantes.Count);
-            for (int j=0; j< PosicoesSorteadas.Count; j++)
-            {
-                if (Posicao == PosicoesSorteadas[j]){
-                    PosicaoRepetida = true;
-                }
+        Posicao = rnd.Next(0,Participantes.Count);
+
+        if (Posicao == i){
+            PosicaoRepetida = true;
+        }
+        
+        foreach (int j in PosicoesSorteadas){
+            if (Posicao == j){
+                PosicaoRepetida = true;
             }
+        }
+
+        }
 
         PosicoesSorteadas.Add(Posicao);
         Participantes[i].Amigo = Participantes[Posicao];
-        }
 
 
     }
@@ -67,4 +71,6 @@ for (int i=0; i< Participantes.Count; i++)
 
 foreach (Pessoa i in Participantes){
     Console.WriteLine($"O amigo secreto de {i.Nome} é {i.Amigo.Nome}.");
+
 }
+
