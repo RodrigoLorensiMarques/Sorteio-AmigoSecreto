@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rodrigo\\Documents\\GitHub\\Sorteio-AmigoSecreto\\Sorteio-AmigoSecreto.csproj",
+      "projectUniqueName": "C:\\Users\\Rodrigo\\Documents\\GitHub\\Sorteio-AmigoSecreto\\SorteioAmigoSecreto\\Sorteio-AmigoSecreto.csproj",
       "projectName": "Sorteio-AmigoSecreto",
-      "projectPath": "C:\\Users\\Rodrigo\\Documents\\GitHub\\Sorteio-AmigoSecreto\\Sorteio-AmigoSecreto.csproj",
+      "projectPath": "C:\\Users\\Rodrigo\\Documents\\GitHub\\Sorteio-AmigoSecreto\\SorteioAmigoSecreto\\Sorteio-AmigoSecreto.csproj",
       "packagesPath": "C:\\Users\\Rodrigo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rodrigo\\Documents\\GitHub\\Sorteio-AmigoSecreto\\obj\\",
+      "outputPath": "C:\\Users\\Rodrigo\\Documents\\GitHub\\Sorteio-AmigoSecreto\\SorteioAmigoSecreto\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rodrigo\\AppData\\Roaming\\NuGet\\NuGet.Config"
