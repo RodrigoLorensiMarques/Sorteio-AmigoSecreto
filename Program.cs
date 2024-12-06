@@ -3,7 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 using Sorteio_AmigoSecreto.Models;
 
 
-
+Console.Clear();
 List <Pessoa> Participantes = new List<Pessoa>();
 
 
@@ -16,13 +16,31 @@ do
 {
     Console.Write("Incluir participante (S/N)? ");
     Opc = char.Parse(Console.ReadLine());
+    Opc = char.ToUpper(Opc);
 
         if (Opc == 'S')
             {   Pessoa Participante = new Pessoa();
                 Console.Write("Digite o nome do participante: ");
-                Participante.Nome = Console.ReadLine();
+                string NomeNovoParticipante = Console.ReadLine();
+
+                NomeNovoParticipante = NomeNovoParticipante.ToUpper();
+                Participante.Nome = NomeNovoParticipante;
                 Participantes.Add(Participante);
+                Console.WriteLine("");
             }
+
+        else if (Opc != 'S' && Opc != 'N'){
+            Console.WriteLine("Essa opção não existe!");
+            Opc = 'S';
+        }
+
+
+        else if (Opc != 'S' && Participantes.Count<2){
+            Console.WriteLine("A quantidade de participantes não pode ser menor do que dois!");
+            Opc = 'S';
+        }
+
+
 
 
 } while (Opc == 'S');
@@ -69,8 +87,20 @@ for (int i=0; i< Participantes.Count; i++)
     }
 
 
-foreach (Pessoa i in Participantes){
-    Console.WriteLine($"O amigo secreto de {i.Nome} é {i.Amigo.Nome}.");
+while (true){
+    Console.Write("Digite o seu nome e veja quem é seu amigo secreto: ");
+    string NomeParticipante = Console.ReadLine();
+    NomeParticipante = NomeParticipante.ToUpper();
+
+    foreach (Pessoa i in Participantes){
+        if (i.Nome == NomeParticipante){
+            Console.WriteLine($"O seu amigo secreto é {i.Amigo.Nome}.");
+
+        }
+    }
+    Console.WriteLine("");
+    Console.ReadLine();
+    Console.Clear();
+
 
 }
-

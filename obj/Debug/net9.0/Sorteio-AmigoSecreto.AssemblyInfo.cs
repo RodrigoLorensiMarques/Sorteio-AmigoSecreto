@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sorteio-AmigoSecreto")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e095b57fe4454f97e5c249ee827f4cac7501fb52")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf0c5f1f9d9a5fd803dd3e54a6a1db5e064fba59")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sorteio-AmigoSecreto")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sorteio-AmigoSecreto")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
