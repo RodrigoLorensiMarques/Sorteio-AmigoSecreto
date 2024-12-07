@@ -5,7 +5,7 @@ using Sorteio_AmigoSecreto.Models;
 
 Console.Clear();
 List <Pessoa> Participantes = new List<Pessoa>();
-
+Pessoa Participante = new Pessoa();
 
 char Opc = 'S';
 
@@ -19,13 +19,12 @@ do
     Opc = char.ToUpper(Opc);
 
         if (Opc == 'S')
-            {   Pessoa Participante = new Pessoa();
+            {   Pessoa NovoParticipante = new Pessoa();
                 Console.Write("Digite o nome do participante: ");
                 string NomeNovoParticipante = Console.ReadLine();
-
-                NomeNovoParticipante = NomeNovoParticipante.ToUpper();
-                Participante.Nome = NomeNovoParticipante;
-                Participantes.Add(Participante);
+                
+                NovoParticipante.Nome = NomeNovoParticipante;
+                Participantes.Add(NovoParticipante);
                 Console.WriteLine("");
             }
 
@@ -48,59 +47,17 @@ do
 Console.WriteLine("\n");
 Console.WriteLine("Fazendo o sorteio... \n");
 
+Participante.Sortear(Participantes);
 
 
-
-Random rnd = new Random();
-List<int> PosicoesSorteadas = new List<int>();
-
-
-
-for (int i=0; i< Participantes.Count; i++)
-    {
-
-    bool PosicaoRepetida = true;
-    int Posicao = -1;
-
-    while (PosicaoRepetida == true)
-        {
-        
-        PosicaoRepetida = false;
-        Posicao = rnd.Next(0,Participantes.Count);
-
-        if (Posicao == i){
-            PosicaoRepetida = true;
-        }
-        
-        foreach (int j in PosicoesSorteadas){
-            if (Posicao == j){
-                PosicaoRepetida = true;
-            }
-        }
-
-        }
-
-        PosicoesSorteadas.Add(Posicao);
-        Participantes[i].Amigo = Participantes[Posicao];
-
-
-    }
 
 
 while (true){
     Console.Write("Digite o seu nome e veja quem é seu amigo secreto: ");
     string NomeParticipante = Console.ReadLine();
-    NomeParticipante = NomeParticipante.ToUpper();
-
-    foreach (Pessoa i in Participantes){
-        if (i.Nome == NomeParticipante){
-            Console.WriteLine($"O seu amigo secreto é {i.Amigo.Nome}.");
-
-        }
-    }
-    Console.WriteLine("");
-    Console.ReadLine();
-    Console.Clear();
+    
+    Participante.MostrarAmigo(Participantes, NomeParticipante);
+    
 
 
 }
