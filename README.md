@@ -1,7 +1,9 @@
 # Sorteio Amigo Secreto
 
- Este simples programinha realiza o sorteio de um amigo secreto. \
- É realizado o cadastro de cada participante e após o sorteio cada participante pode verificar o seu amigo secreto.
+Este simples programinha realiza o sorteio de um amigo secreto. \
+É realizado o cadastro de cada participante e após o sorteio cada participante pode verificar o seu amigo secreto.
+
+Também pude exercitar alguns conceitos de Programação orientada a objeto, como abstração e encapsulamento.
 
  ## Como Rodar:
 
